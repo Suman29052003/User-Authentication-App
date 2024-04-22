@@ -9,6 +9,7 @@ exports.signUp = async (req, res, next) => {
         // Check if the user already exists
         const user = await User.findOne({ email: req.body.email });
         if (user) {
+            console.log("User already exists!")
             return next(new createError("User already exists!", 400));
         }
 
@@ -33,6 +34,9 @@ exports.signUp = async (req, res, next) => {
             message: "User registered successfully",
             token
         });
+
+        console.log("User registered successfully!");
+
     } catch (error) {
         next(error);
     }
