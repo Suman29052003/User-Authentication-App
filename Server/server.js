@@ -10,6 +10,10 @@ app.use(cors())
 
 app.use(express.json( )); // Middleware for parsing JSON bodies in HTTP requests
 
+// app.get('/',(req,res)=>{
+//     res.send("Hello World!")
+// })
+
 app.use('/api/auth',authRouter) //  Route prefix to mount the user router at /users
 
 connectToDatabase() // Connecting to the database
