@@ -4,6 +4,7 @@ import "./Login.css";
 import userIcon from "../Icons/userIcon.svg";
 import emailIcon from "../Icons/emailIcon.svg";
 import passwordIcon from "../Icons/passwordIcon.svg";
+import adminUserIcon from "../Icons/admin-users-svgrepo-com.svg";
 import { ToastContainer, toast } from "react-toastify"; // Import ToastContainer and toast from react-toastify
 import "react-toastify/dist/ReactToastify.css"; // Import the CSS for react-toastify
 
@@ -24,6 +25,7 @@ const Login = () => {
   const [action, setAction] = useState("Sign Up");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [role, setRole] = useState("User");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
@@ -101,6 +103,14 @@ const Login = () => {
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="input role">
+              <img src={adminUserIcon} alt="" />
+              <input
+                placeholder="Enter Role"
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
               />
             </div>
             <div className="input password">
