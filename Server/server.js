@@ -10,7 +10,7 @@ app.use(cors())
 
 app.use(express.json( )); // Middleware for parsing JSON bodies in HTTP requests
 
-// app.get('/',(req,res)=>{
+// app.get('/api/auth/login',(req,res)=>{
 //     res.send("Hello World!")
 // })
 
